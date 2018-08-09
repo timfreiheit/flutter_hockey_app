@@ -2,9 +2,30 @@
 
 Flutter Hockey App Plugin
 
-## Getting Started
+##Integration
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+add the packages to your dependencies.
+At the moment ``` pub ``` is not supported
 
-For help on editing plugin code, view the [documentation](https://flutter.io/platform-plugins/#edit-code).
+```
+dependencies:
+    flutter_hockey_app:
+        git: git@github.com:timfreiheit/flutter_hockey_app.git
+```
+
+main.dart:
+```dart
+import 'package:flutter_hockey_app/flutter_hockey_app.dart';
+
+void main() {
+  HockeyAppClient.init(appId: "XXXXX");
+  HockeyAppClient.runInZone(() {
+    runApp(new MyApp());
+  });
+}
+
+
+```
+
+``` HockeyAppClient.init("XXX") ``` is optional if you prefer to initialize the native HockeyAppSDK in platform specific code.
+
