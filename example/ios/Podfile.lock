@@ -2,10 +2,18 @@ PODS:
   - Flutter (1.0.0)
   - flutter_hockey_app (0.0.1):
     - Flutter
+    - HockeySDK (~> 5.1.2)
+  - HockeySDK (5.1.2):
+    - HockeySDK/DefaultLib (= 5.1.2)
+  - HockeySDK/DefaultLib (5.1.2)
 
 DEPENDENCIES:
   - Flutter (from `.symlinks/flutter/ios`)
   - flutter_hockey_app (from `.symlinks/plugins/flutter_hockey_app/ios`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - HockeySDK
 
 EXTERNAL SOURCES:
   Flutter:
@@ -15,7 +23,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Flutter: 9d0fac939486c9aba2809b7982dfdbb47a7b0296
-  flutter_hockey_app: c5926a330bb7b48a8f3d65b8f055da04c289611b
+  flutter_hockey_app: 93869bbcd4f4a697c7e5d0091221660c85b6d5a0
+  HockeySDK: 38b7e2726af1ea86ae97ce4b5de33ab0817e3500
 
 PODFILE CHECKSUM: 7765ea4305eaab0b3dfd384c7de11902aa3195fd
 

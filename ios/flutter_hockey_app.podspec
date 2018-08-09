@@ -15,8 +15,9 @@ Flutter Hockey App Plugin
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
-  s.dependency 'HockeySDK'
-  
+  s.dependency 'HockeySDK', '~> 5.1.2'
+  s.static_framework = true
+
   s.ios.deployment_target = '8.0'
 end
 

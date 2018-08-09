@@ -23,6 +23,9 @@ class HockeyAppClient {
     return inDebugMode;
   }
 
+  // 
+  // optional if the HockeyApp SDK is already initialized in platform specific code
+  //
   static void init({String appId, bool updateEnabled = false}) {
     if (isInDebugMode) {
       return;
@@ -54,13 +57,13 @@ class HockeyAppClient {
     );
   }
 
-  static void captureException({
+  static Future<Null> captureException({
     @required dynamic exception,
     dynamic stackTrace,
-  }) {
+  }) async {
     stackTrace ??= "";
 
-    _channel.invokeMethod("captureException", {
+    await _channel.invokeMethod("captureException", {
       "exception": {
         "type": "${exception.runtimeType}",
         "value": "$exception"
