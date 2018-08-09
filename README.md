@@ -2,7 +2,7 @@
 
 Flutter Hockey App Plugin
 
-##Integration
+## Integration
 
 add the packages to your dependencies.
 At the moment ``` pub ``` is not supported
